@@ -1,0 +1,17 @@
+import java.text.DecimalFormat;
+import java.util.*;
+
+public class LoanCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double borrowedAmount = sc.nextDouble();
+        double interestRate = 0.10;
+        double totalAmount = borrowedAmount * (1 + interestRate);
+        double emi = totalAmount / 12;
+
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
+        System.out.println(decimalFormat.format(totalAmount));
+        System.out.println(decimalFormat.format(emi));
+    }
+}
